@@ -1,0 +1,5 @@
+query Following {
+  viewer {
+    following(first: 10) { nodes { login name } }
+  }
+}

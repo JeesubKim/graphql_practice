@@ -1,0 +1,4 @@
+query TwoRepos {
+  react: repository(owner: "facebook", name: "react") { name stargazerCount }
+  vue: repository(owner: "vuejs", name: "core") { name stargazerCount }
+}

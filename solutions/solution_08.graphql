@@ -1,0 +1,6 @@
+query FilmBasic($id: ID!) {
+  film(filmID: $id) {
+    title
+    releaseDate
+  }
+}

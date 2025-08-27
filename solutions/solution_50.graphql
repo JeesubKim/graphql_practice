@@ -1,0 +1,16 @@
+query Final {
+  viewer {
+    login
+    name
+    bio
+    topRepos: repositories(first: 3, orderBy:{field:STARGAZERS, direction:DESC}) {
+      nodes { name stargazerCount url }
+    }
+    recentPRs: pullRequests(first: 3, orderBy:{field:CREATED_AT, direction:DESC}) {
+      nodes { title url createdAt }
+    }
+    recentIssues: issues(first: 3, orderBy:{field:CREATED_AT, direction:DESC}) {
+      nodes { title url createdAt }
+    }
+  }
+}

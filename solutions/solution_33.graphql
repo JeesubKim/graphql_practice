@@ -1,0 +1,5 @@
+mutation Fork($id: ID!) {
+  createFork(input: { repositoryId: $id }) {
+    repository { id name owner { login } }
+  }
+}

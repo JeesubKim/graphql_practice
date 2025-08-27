@@ -1,0 +1,7 @@
+query IssuesBasic($owner: String!, $name: String!) {
+  repository(owner: $owner, name: $name) {
+    issues(first: 5, states: OPEN, orderBy:{field:CREATED_AT, direction:DESC}) {
+      nodes { title author { login } }
+    }
+  }
+}

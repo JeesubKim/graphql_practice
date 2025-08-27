@@ -1,0 +1,8 @@
+fragment FilmFields on Film {
+  title
+  releaseDate
+  director
+}
+query FilmsWithFragment {
+  allFilms { edges { node { ...FilmFields } } }
+}

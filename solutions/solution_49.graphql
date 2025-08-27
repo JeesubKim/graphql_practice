@@ -1,0 +1,9 @@
+query MixedIssues {
+  search(type: ISSUE, query: "repo:facebook/react is:issue,pr", first: 10) {
+    nodes {
+      __typename
+      ... on Issue { number title author { login } }
+      ... on PullRequest { number title author { login } }
+    }
+  }
+}

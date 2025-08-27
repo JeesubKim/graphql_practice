@@ -1,0 +1,7 @@
+query Readme($owner: String!, $name: String!) {
+  repository(owner: $owner, name: $name) {
+    object(expression: "main:README.md") {
+      ... on Blob { text }
+    }
+  }
+}

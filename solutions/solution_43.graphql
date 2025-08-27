@@ -1,0 +1,15 @@
+query RecentStats($from: DateTime!) {
+  viewer {
+    repositories(first: 20, orderBy:{field:UPDATED_AT, direction:DESC}) {
+      nodes {
+        name
+        recentPRs: pullRequests(first: 1, orderBy:{field:CREATED_AT, direction:DESC}, after: null, states: OPEN) {
+          totalCount
+        }
+        recentIssues: issues(first: 1, orderBy:{field:CREATED_AT, direction:DESC}, after: null, states: OPEN) {
+          totalCount
+        }
+      }
+    }
+  }
+}

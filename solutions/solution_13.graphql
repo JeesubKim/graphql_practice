@@ -1,0 +1,5 @@
+query Ships {
+  allStarships(first: 5) {
+    edges { node { name model } }
+  }
+}

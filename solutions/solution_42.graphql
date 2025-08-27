@@ -1,0 +1,11 @@
+query IssueCounts {
+  viewer {
+    repositories(first: 50, orderBy:{field:UPDATED_AT, direction:DESC}) {
+      nodes {
+        name
+        open: issues(states: OPEN) { totalCount }
+        closed: issues(states: CLOSED) { totalCount }
+      }
+    }
+  }
+}

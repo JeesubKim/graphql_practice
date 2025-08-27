@@ -1,0 +1,8 @@
+query IssuesScroll($owner: String!, $name: String!, $n: Int!, $cursor: String) {
+  repository(owner: $owner, name: $name) {
+    issues(first: $n, after: $cursor, states: OPEN, orderBy:{field:CREATED_AT, direction:DESC}) {
+      pageInfo { hasNextPage endCursor }
+      nodes { number title createdAt author { login } }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+query SuggestUsers {
+  search(type: USER, query: "followers:>100", first: 5) {
+    nodes { ... on User { login name followers { totalCount } } }
+  }
+}

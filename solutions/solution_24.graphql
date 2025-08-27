@@ -1,0 +1,6 @@
+query NodeMaybeFilm($id: ID!) {
+  node(id: $id) {
+    id
+    ... on Film { title }
+  }
+}

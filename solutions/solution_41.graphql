@@ -1,0 +1,10 @@
+query IssuesAndPRs($owner: String!, $name: String!) {
+  repository(owner: $owner, name: $name) {
+    issues(first: 3, orderBy:{field:CREATED_AT, direction:DESC}) {
+      nodes { __typename number title author { login } }
+    }
+    pullRequests(first: 3, orderBy:{field:CREATED_AT, direction:DESC}) {
+      nodes { __typename number title author { login } }
+    }
+  }
+}

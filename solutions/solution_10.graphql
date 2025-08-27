@@ -1,0 +1,6 @@
+query VaderFilms($id: ID!) {
+  person(personID: $id) {
+    name
+    filmConnection { films { title } }
+  }
+}

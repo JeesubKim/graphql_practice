@@ -1,0 +1,7 @@
+query StartsWithK {
+  countries(filter: { name: { regex: "^K" } }) {
+    code
+    name
+    continent { code }
+  }
+}

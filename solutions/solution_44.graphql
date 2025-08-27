@@ -1,0 +1,8 @@
+fragment UserProfile on User {
+  login
+  name
+  bio
+}
+query MyFollowers {
+  viewer { followers(first: 5) { nodes { ...UserProfile } } }
+}

@@ -1,0 +1,6 @@
+query EnglishSpeaking {
+  countries(filter: { languages: { code: { eq: "en" } } }) {
+    name
+    continent { name }
+  }
+}

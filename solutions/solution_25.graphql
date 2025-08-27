@@ -1,0 +1,6 @@
+query CountriesMaybeCurrency($withCurrency: Boolean!) {
+  countries {
+    name
+    currency @include(if: $withCurrency)
+  }
+}

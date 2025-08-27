@@ -1,0 +1,6 @@
+query FilmsPage($n: Int!) {
+  allFilms(first: $n) {
+    pageInfo { hasNextPage endCursor }
+    edges { cursor node { title } }
+  }
+}

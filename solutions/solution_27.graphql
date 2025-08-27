@@ -1,0 +1,7 @@
+query MyRepos {
+  viewer {
+    repositories(first: 10, orderBy: {field: CREATED_AT, direction: DESC}) {
+      nodes { name createdAt }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+query TwoPersons {
+  luke: person(personID: 1) { name }
+  vader: person(personID: 4) { name }
+}

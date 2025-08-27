@@ -1,0 +1,8 @@
+fragment CountryFields on Country {
+  code
+  name
+  emoji
+}
+query CountriesFrag {
+  countries { ...CountryFields }
+}

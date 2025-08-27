@@ -1,0 +1,6 @@
+query AfricaCountries {
+  continent(code: "AF") {
+    name
+    countries { name currency }
+  }
+}

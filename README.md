@@ -1,11 +1,19 @@
-# GraphQL 연습 문제 50선
+# GraphQL 실전 연습 50문제 (실행 가능한 버전)
 
-이 저장소는 GraphQL 학습을 위한 50개의 문제를 제공합니다.
-기초 쿼리부터, Pagination, Mutation, Fragment, Variables 활용 등 실제 프로젝트에 필요한 기능을 다룹니다.
+- 공개 GraphQL API를 대상으로 한 **실행 가능한** 50문제입니다.
+- 난이도: 기초(1–10: Countries/SWAPI) → 중급(11–25: SWAPI/SpaceX) → 고급(26–40: GitHub) → 종합(41–50).
+- 각 문제는 **엔드포인트**, **요구사항**, **스타터 쿼리/변수 템플릿**, **힌트/주의**를 포함합니다.
+- `solutions/`에는 참고용 정답(예시 쿼리)이 포함되어 있으며, 실제 응답은 서비스 데이터에 따라 달라질 수 있습니다.
 
-## 사용법
-1. 각 문제는 `problems/` 폴더 안에 Markdown 파일로 제공됩니다.
-2. 문제를 풀 때는 `solutions/` 폴더에 정답을 작성해보세요.
-3. GraphiQL, Apollo Client, GitHub GraphQL API 등 실제 엔드포인트를 활용해 테스트하세요.
+## 엔드포인트
+- Countries: https://countries.trevorblades.com
+- SWAPI GraphQL(Star Wars): https://swapi-graphql.netlify.app/.netlify/functions/index
+- SpaceX (community): https://api.spacex.land/graphql/
+- GitHub GraphQL: https://api.github.com/graphql  *(Personal Access Token 필요)*
 
----
+## 사용 방법
+1. 문제의 엔드포인트로 접속(또는 GraphiQL/Apollo Sandbox에서 URL 지정).
+2. 문제의 스타터 쿼리/변수 템플릿을 복사해 실행.
+3. 자신의 해답을 `solutions/solution_##.graphql` 또는 `.md`에 기록.
+
+> GitHub API는 Authorization 헤더: `Bearer <YOUR_TOKEN>` 를 추가해야 합니다.

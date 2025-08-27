@@ -1,0 +1,6 @@
+query PlanetResidents($id: ID!) {
+  planet(planetID: $id) {
+    name
+    residentConnection { residents { name } }
+  }
+}

@@ -1,0 +1,13 @@
+query LastCommit($owner: String!, $name: String!) {
+  repository(owner: $owner, name: $name) {
+    ref(qualifiedName: "main") {
+      target {
+        ... on Commit {
+          history(first: 1) {
+            nodes { messageHeadline committedDate }
+          }
+        }
+      }
+    }
+  }
+}

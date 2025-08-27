@@ -1,0 +1,6 @@
+query LaunchWithRocket {
+  launchesPast(limit: 3) {
+    mission_name
+    rocket { rocket_name }
+  }
+}

@@ -1,0 +1,6 @@
+query LaunchesPage($limit: Int!, $offset: Int!) {
+  launchesPast(limit: $limit, offset: $offset) {
+    mission_name
+    launch_year
+  }
+}

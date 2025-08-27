@@ -1,0 +1,6 @@
+query Payloads {
+  launchesPast(limit: 3) {
+    mission_name
+    payloads { nationality type }
+  }
+}

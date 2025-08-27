@@ -1,0 +1,5 @@
+query PeopleFirst10 {
+  allPeople(first: 10) {
+    edges { node { name } }
+  }
+}
